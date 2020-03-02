@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name" translatable="false">EXTN-DEH Mini</string>
+    <string name="app_name" translatable="false">左鎮國中探索課程</string>
     <string name="title_activity_poi" translatable="false">POIActivity</string>
     <string name="title_activity_loi" translatable="false">LOIActivity</string>
     <string name="title_activity_aoi" translatable="false">AOIActivity</string>
