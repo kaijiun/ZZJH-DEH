@@ -140,7 +140,7 @@
     <string name="not_found_SOI">附近找不到任何主題故事</string>
     <string name="Are_you_sure">確定要離開嗎</string>
     <string name="filter_notice">篩選器僅適用於搜尋景點</string>
-    <string name="leave_title">離開 EXTN Mini</string>
+    <string name="leave_title">離開 SDC Mini</string>
     <string name="search_poi_filter">請問您是否要搜尋景點?</string>
     <string name="server_busy">伺服器忙碌中，請稍後再試</string>
     <string name="connect_network">請連上網路後再試!</string>

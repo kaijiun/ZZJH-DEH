@@ -318,7 +318,7 @@ public class MiniActivity extends AppCompatActivity implements OnMapReadyCallbac
         toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         assert getSupportActionBar() != null;
-        getSupportActionBar().setTitle("ZZJH DEH");
+        getSupportActionBar().setTitle("SDC DEH Mini");
 
         //menu drawer
         drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
@@ -860,6 +860,7 @@ public class MiniActivity extends AppCompatActivity implements OnMapReadyCallbac
                 mType = "MyPOI";
                 action_log = "/API/extn/userPOI";
                 // api = getResources().getString(R.string.api_userPOIs);
+
                 api = "http://deh.csie.ncku.edu.tw:8080/api/v1/users/pois";
             } else if (v.getId() == R.id.button_my_LOI){
                 action_log = "/API/extn/userLOI";
@@ -912,12 +913,12 @@ public class MiniActivity extends AppCompatActivity implements OnMapReadyCallbac
                     }
                 }
                 url = api + language + "lat=" + lat + "&lng=" + lng + "&dis=" + distance + "&num=" +
-                        number+ tp +fmt + "&coi_name=" + "extn" + "&action=" + action_log + "&devid=" + uuid + "&useraccount=" + account_for_login + "&ula=" + curr_lat + "&ulo=" + curr_lng;
+                        number+ tp +fmt + "&coi_name=" + "sdc" + "&action=" + action_log + "&devid=" + uuid + "&useraccount=" + account_for_login + "&ula=" + curr_lat + "&ulo=" + curr_lng;
             }
             if (v.getId() == R.id.button_my_POI || v.getId() == R.id.button_my_LOI
                     || v.getId() == R.id.button_my_AOI|| v.getId() == R.id.button_my_SOI) {
                 url = api + "?lat=" + lat + "&lng=" + lng + "&dis=" + distance + "&num=" +
-                        number+ "&coi_name=" + "extn"+ "&action=" + action_log + "&devid=" + uuid+ "&useraccount=" + account_for_login+ "&ula=" + curr_lat + "&ulo=" + curr_lng ;             }
+                        number+ "&coi_name=" + "sdc"+ "&action=" + action_log + "&devid=" + uuid+ "&useraccount=" + account_for_login+ "&ula=" + curr_lat + "&ulo=" + curr_lng ;             }
 
             Log.d("url", url);
             Log.d("type", mType);
@@ -1310,7 +1311,7 @@ public class MiniActivity extends AppCompatActivity implements OnMapReadyCallbac
 
                 if (mServer.getLogInStatus()) {
                     hint = getResources().getString(R.string.login_success);
-                    uploadLog(account_for_login,String.valueOf(curr_lat),String.valueOf(curr_lng),"/API/extn/UserLogin",uuid);
+                    uploadLog(account_for_login,String.valueOf(curr_lat),String.valueOf(curr_lng),"/API/sdc/UserLogin",uuid);
                     mMenu.findItem(R.id.my_site).setVisible(true);
                     login_status = true;
                     include_menu_log.setVisibility(View.GONE);
@@ -1400,10 +1401,10 @@ public class MiniActivity extends AppCompatActivity implements OnMapReadyCallbac
                 Log.d("Token",""+Token);
             }
             if(ProxyService.Exception_GOGO.equals(intent.getAction())){
-                if(!globalVariable.checkInternet())
+                /*if(!globalVariable.checkInternet())
                     Toast.makeText(MiniActivity.this, getResources().getString(R.string.connect_network), Toast.LENGTH_SHORT).show();
                 else
-                    Toast.makeText(MiniActivity.this,getResources().getString(R.string.server_busy), Toast.LENGTH_SHORT).show();
+                    Toast.makeText(MiniActivity.this,getResources().getString(R.string.server_busy), Toast.LENGTH_SHORT).show();*/
             }
             if(!ProxyService.GETTOKEN.equals(intent.getAction())) {
                 Type = mServer.getType();
@@ -2346,7 +2347,7 @@ public class MiniActivity extends AppCompatActivity implements OnMapReadyCallbac
         FormBody.Builder formBody = new FormBody.Builder();
         formBody.add("username",username);
         formBody.add("language",group_language);
-        formBody.add("coi_name","extn");
+        formBody.add("coi_name","sdc");
 
         final Request request = new Request.Builder()
                 .url(url_for_search_group)
@@ -2411,6 +2412,7 @@ public class MiniActivity extends AppCompatActivity implements OnMapReadyCallbac
         formBody.add("action", action);
         formBody.add("devid", uuid);
         //close for test
+
         String url = "http://deh.csie.ncku.edu.tw:8080/api/v1/users/xoilog?useraccount=" + userAccount + "&ula=" + ula + "&ulo=" + ulo + "&devid=" + uuid + "&action=" + action;
         //String url = "http://140.116.82.130:8080/api/v1/users/xoilog?useraccount=" + userAccount + "&ula=" + ula + "&ulo=" + ulo + "&devid=" + uuid + "&action=" + action;
         Request requestt = new Request.Builder()

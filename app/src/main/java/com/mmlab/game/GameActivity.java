@@ -66,8 +66,9 @@ public class GameActivity extends AppCompatActivity {
 
 
     //api
+
     private static String BASE_URL = "http://deh.csie.ncku.edu.tw:8080/";
-//    private static String BASE_URL = "http://140.116.82.130:8080/";
+    // private static String BASE_URL = "http://140.116.82.130:8080/";
     private static Retrofit retrofit = new Retrofit.Builder().baseUrl(BASE_URL).addConverterFactory(GsonConverterFactory.create()).build();
     private static ApiService api = retrofit.create(ApiService.class);
     private static Call<List<Group>> callGroupList;
@@ -277,7 +278,7 @@ public class GameActivity extends AppCompatActivity {
 
     //api part ----------------------------------------------------------
     public void apiLogin(String un,String pw){
-        callUserLogin = getApi().getUser(new LoginForm(un,md5(pw),"extn"));
+        callUserLogin = getApi().getUser(new LoginForm(un,md5(pw),"sdc"));
         callUserLogin.enqueue(new Callback<User>() {
             @Override
             public void onResponse(Call<User> call, Response<User> response) {
@@ -307,7 +308,7 @@ public class GameActivity extends AppCompatActivity {
     }
 
     public static void apiGroup(){
-        callGroupList = getApi().getGroup(new GroupSearch(getUser_id(),"extn"));
+        callGroupList = getApi().getGroup(new GroupSearch(getUser_id(),"sdc"));
         callGroupList.enqueue(new Callback<List<Group>>() {
             @Override
             public void onResponse(Call<List<Group>> call2, Response<List<Group>> response) {

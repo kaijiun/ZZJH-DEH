@@ -669,41 +669,49 @@ public class GroupMainActivity extends AppCompatActivity implements  OnMapReadyC
                 mType = "SOI";
                 action_log = "/API/extn/group/nearbySOI";
                 //api = getResources().getString(R.string.api_nearbySOIs);
+
                 api = "http://deh.csie.ncku.edu.tw:8080/api/v1/group_sois";
             } else if (v.getId() == R.id.button_search_AOI){
                 mType = "AOI";
                 action_log = "/API/extn/group/nearbyAOI";
                 //api = getResources().getString(R.string.api_nearbyAOIs);
+
                 api = "http://deh.csie.ncku.edu.tw:8080/api/v1/group_aois";
             } else if (v.getId() == R.id.button_search_LOI){
                 mType = "LOI";
                 action_log = "/API/extn/group/nearbyLOI";
                 //api = getResources().getString(R.string.api_nearbyLOIs);
+
                 api = "http://deh.csie.ncku.edu.tw:8080/api/v1/group_lois";
             } else if(v.getId() == R.id.button_search_POI){
                 mType = "POI";
                 action_log = "/API/extn/group/nearbyPOI";
                 //api = getResources().getString(R.string.api_nearbyPOIs);
+
                 api = "http://deh.csie.ncku.edu.tw:8080/api/v1/group_pois";
             } else if (v.getId() == R.id.button_my_POI) {
                 mType = "MyPOI";
                 action_log = "/API/extn/group/userPOI";
                 //api = getResources().getString(R.string.api_userPOIs);
+
                 api = "http://deh.csie.ncku.edu.tw:8080/api/v1//users/group_pois";
             } else if (v.getId() == R.id.button_my_LOI){
                 mType = "MyLOI";
                 action_log = "/API/extn/group/userLOI";
-                api = "http://deh.csie.ncku.edu.tw:8080/api/v1//users/group_lois";
+
+                api = "http://deh.csie.ncku.edu.tw:8080//api/v1//users/group_lois";
                 // api = getResources().getString(R.string.api_userLOIs);
             } else if (v.getId() == R.id.button_my_AOI){
                 mType = "MyAOI";
                 action_log = "/API/extn/group/userAOI";
                 //api = getResources().getString(R.string.api_userAOIs);
+
                 api = "http://deh.csie.ncku.edu.tw:8080/api/v1//users/group_aois";
             }else if(v.getId() == R.id.button_my_SOI){
                 mType = "MySOI";
                 action_log = "/API/extn/group/userSOI";
                 //api = getResources().getString(R.string.api_userSOIs);
+
                 api = "http://deh.csie.ncku.edu.tw:8080/api/v1//users/group_sois";
             }
             globalVariable.setStatus(mType);
@@ -744,13 +752,13 @@ public class GroupMainActivity extends AppCompatActivity implements  OnMapReadyC
                     }
                 }
                 url = api + language + "lat=" + lat + "&lng=" + lng + "&dis=" + distance + "&num=" +
-                        number+ tp +fmt + "&group_id=" + g_id + "&coi_name=" + "extn"+"&action=" + action_log + "&devid=" + uuid+ "&useraccount=" + account_for_login+ "&ula=" + curr_lat + "&ulo=" + curr_lng;
+                        number+ tp +fmt + "&group_id=" + g_id + "&coi_name=" + "sdc"+"&action=" + action_log + "&devid=" + uuid+ "&useraccount=" + account_for_login+ "&ula=" + curr_lat + "&ulo=" + curr_lng;
             }
 
             if (v.getId() == R.id.button_my_POI || v.getId() == R.id.button_my_LOI
                     || v.getId() == R.id.button_my_AOI|| v.getId() == R.id.button_my_SOI) {
                 url = api + "?lat=" + lat + "&lng=" + lng + "&dis=" + distance + "&num=" +
-                        number+ "&group_id="+g_id + "&coi_name=" + "extn"+ "&action=" + action_log + "&devid=" + uuid+ "&useraccount=" + account_for_login+ "&ula=" + curr_lat + "&ulo=" + curr_lng; /*+ "&did=" + globalVariable.getDeviceID() +
+                        number+ "&group_id="+g_id + "&coi_name=" + "sdc"+ "&action=" + action_log + "&devid=" + uuid+ "&useraccount=" + account_for_login+ "&ula=" + curr_lat + "&ulo=" + curr_lng; /*+ "&did=" + globalVariable.getDeviceID() +
                                                     "&appver=mini200&ulat=22.9942&ulng=120.1659"*/;
             }
 
@@ -1337,6 +1345,7 @@ public class GroupMainActivity extends AppCompatActivity implements  OnMapReadyC
                 Log.d("Token",""+Token);
             }
             if(ProxyService.Exception_GOGO.equals(intent.getAction())){
+
                 if(!globalVariable.checkInternet())
                     Toast.makeText(GroupMainActivity.this, getResources().getString(R.string.connect_network), Toast.LENGTH_SHORT).show();
                 else

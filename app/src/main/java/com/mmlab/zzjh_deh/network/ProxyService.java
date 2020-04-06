@@ -377,7 +377,8 @@ public class ProxyService extends Service implements TaskCompleted {
         pHandler.sendMessage(message);
     }
     public void Authorization(){
-        String url = "http://deh.csie.ncku.edu.tw:8080/api/v1/grant";
+
+        String url = "http://deh.csie.ncku.edu.tw:8080/";
         Message message = pHandler.obtainMessage();
         Bundle bundle = new Bundle();
         bundle.putString("type","Authorization");

@@ -74,7 +74,7 @@ public class GroupChoiceFragement extends Fragment implements GroupFragmentCallb
         score_url.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://deh.csie.ncku.edu.tw/extn"));
+                Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://deh.csie.ncku.edu.tw/sdc"));
                 startActivity(browserIntent);
             }
         });

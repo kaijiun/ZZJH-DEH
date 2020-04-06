@@ -91,7 +91,7 @@ public class LoginFragemet extends Fragment {
                     }
 
                     //user login api
-                    Call<User> call = api.getUser(new LoginForm(un,md5(pw),"extn"));
+                    Call<User> call = api.getUser(new LoginForm(un,md5(pw),"sdc"));
                     call.enqueue(new Callback<User>() {
                         @Override
                         public void onResponse(Call<User> call, Response<User> response) {

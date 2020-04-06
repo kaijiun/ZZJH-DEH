@@ -488,7 +488,7 @@ public class POIActivity extends AppCompatActivity implements TaskCompleted {
             formBody.add("useraccount", userAccount);
             formBody.add("ula", ula);
             formBody.add("ulo", ulo);
-            formBody.add("action", "/API/extn/poi_detail/" + clicked_poi_id);
+            formBody.add("action", "/API/sdc/poi_detail/" + clicked_poi_id);
             formBody.add("devid", uuid);
             String url = "http://deh.csie.ncku.edu.tw:8080/api/v1/users/xoilog?useraccount=" + userAccount + "&ula=" + ula + "&ulo=" + ulo + "&devid=" + uuid + "&action=" + "/API/test/poi_detail/" + clicked_poi_id;
             Request requestt = new Request.Builder()
