@@ -477,10 +477,10 @@ public class MiniActivity extends AppCompatActivity implements OnMapReadyCallbac
                                 }
                                 if (search_center){
                                     button_search_center.setVisibility(View.VISIBLE);
-                                    search_center_status = true;
+                                    search_center_status = false;
                                 } else {
                                     button_search_center.setVisibility(View.GONE);
-                                    search_center_status = false;
+                                    search_center_status = true;
                                 }
                                 if(checkBox_setting){
                                     checkbox_setting_status = true;

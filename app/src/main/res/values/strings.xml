@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name" translatable="false">SDC DEH</string>
+    <string name="app_name" translatable="false">SDC DEH Mini</string>
     <string name="title_activity_poi" translatable="false">POIActivity</string>
     <string name="title_activity_loi" translatable="false">LOIActivity</string>
     <string name="title_activity_aoi" translatable="false">AOIActivity</string>

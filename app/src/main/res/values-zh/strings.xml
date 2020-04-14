@@ -40,7 +40,7 @@
 
     <string name="not_found">找不到符合的搜尋景點</string>
 
-    <string name="search_settings">DEH 搜尋設定</string>
+    <string name="search_settings">SDC 搜尋設定</string>
     <string name="unit">筆</string>
     <string name="no_internet_title">無法連線至網路</string>
     <string name="internet_detail">開啟網路連線設定</string>
@@ -105,7 +105,7 @@
     <string name="open_gps_setting">開啟GPS設定</string>
     <string name="description_search">search description</string>
     <string name="about">關於</string>
-    <string name="setting_deh">設定 DEH Mini</string>
+    <string name="setting_deh">設定 SDC DEH Mini</string>
     <string name="setting">設定</string>
     <string name="sign_in">登入</string>
     <string name="sign_out">登出</string>

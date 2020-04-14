@@ -9,8 +9,8 @@ android {
         applicationId "com.mmlab.zzjh_deh"
         minSdkVersion 23
         targetSdkVersion 28
-        versionCode 58
-        versionName "1.0.7"
+        versionCode 60
+        versionName "1.1.1"
         javaCompileOptions { annotationProcessorOptions { includeCompileClasspath = true } }
 
     }
