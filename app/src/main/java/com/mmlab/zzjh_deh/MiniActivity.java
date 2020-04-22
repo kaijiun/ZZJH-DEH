@@ -475,12 +475,13 @@ public class MiniActivity extends AppCompatActivity implements OnMapReadyCallbac
                                     button_search_range.setVisibility(View.GONE);
                                     search_range_status = false;
                                 }
+                                //disable search center 2020/04/15 Kai
                                 if (search_center){
                                     button_search_center.setVisibility(View.VISIBLE);
-                                    search_center_status = false;
+                                    search_center_status = true;
                                 } else {
                                     button_search_center.setVisibility(View.GONE);
-                                    search_center_status = true;
+                                    search_center_status = false;
                                 }
                                 if(checkBox_setting){
                                     checkbox_setting_status = true;
@@ -539,9 +540,9 @@ public class MiniActivity extends AppCompatActivity implements OnMapReadyCallbac
                     @Override
                     public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                         if(isChecked){
-                            checkBox_setting = true;
-                        } else {
                             checkBox_setting = false;
+                        } else {
+                            checkBox_setting = true;
                         }
                     }
 
@@ -1238,10 +1239,11 @@ public class MiniActivity extends AppCompatActivity implements OnMapReadyCallbac
         } else {
             button_search_range.setVisibility(View.GONE);
         }
+        //search center default on
         if (search_center_status){
-            button_search_center.setVisibility(View.VISIBLE);
-        } else {
             button_search_center.setVisibility(View.GONE);
+        } else {
+            button_search_center.setVisibility(View.VISIBLE);
         }
 
     }
