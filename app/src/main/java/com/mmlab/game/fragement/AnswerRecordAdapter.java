@@ -7,10 +7,8 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.mmlab.zzjh_deh.R;
-import com.mmlab.game.module.AnswerRecord;
 import com.mmlab.game.module.AnswerRecordShowing;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class AnswerRecordAdapter extends RecyclerView.Adapter<AnswerRecordAdapter.ViewHolder> {

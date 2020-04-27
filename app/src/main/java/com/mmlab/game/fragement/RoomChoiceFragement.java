@@ -1,39 +1,20 @@
 package com.mmlab.game.fragement;
 
-import android.content.Intent;
-import android.database.sqlite.SQLiteDatabase;
-import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
-import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import com.getbase.floatingactionbutton.FloatingActionButton;
 import com.mmlab.zzjh_deh.R;
-import com.mmlab.game.ApiService;
 import com.mmlab.game.GameActivity;
-import com.mmlab.game.callback.GroupFragmentCallback;
 import com.mmlab.game.callback.RoomFragmentCallback;
-import com.mmlab.game.db.DbHandler;
-import com.mmlab.game.module.AnswerRecordShowing;
-import com.mmlab.game.module.Id;
 import com.mmlab.game.thread.ChestThread;
-
-import java.util.List;
-
-import retrofit2.Call;
-import retrofit2.Callback;
-import retrofit2.Response;
-import retrofit2.Retrofit;
-import retrofit2.converter.gson.GsonConverterFactory;
 
 public class RoomChoiceFragement extends Fragment implements RoomFragmentCallback
 {

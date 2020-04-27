@@ -1,3 +1,4 @@
+
 package com.mmlab.zzjh_deh;
 
 import android.Manifest;
@@ -272,6 +273,7 @@ public class MiniActivity extends AppCompatActivity implements OnMapReadyCallbac
         Log.d("uuid",uuid);
         Log.d(TAG, "onCreate()...");
         Log.d("Login","qwe"+login_status );
+
 
         //check version
         try {
@@ -1109,8 +1111,7 @@ public class MiniActivity extends AppCompatActivity implements OnMapReadyCallbac
         Log.d(TAG, "onResume()...");
         RealmResults<MyFavorite> myFavorites = realm.where(MyFavorite.class)
                 .findAll();
-
-        Log.d("My favorite", myFavorites.toString());
+        Log.d("My favorite", "xxx "+myFavorites.toString());
         mFavorites = new ArrayList<>();
 
         for (MyFavorite favorite: myFavorites) {
@@ -1143,6 +1144,7 @@ public class MiniActivity extends AppCompatActivity implements OnMapReadyCallbac
         AppEventsLogger.activateApp(this);
 
         startService();
+//        startProxyService();
 
     }
 
@@ -1151,7 +1153,7 @@ public class MiniActivity extends AppCompatActivity implements OnMapReadyCallbac
         super.onPause();
         StoreUserPreference();
         AppEventsLogger.deactivateApp(this);
-        stopProxyService();
+//        stopProxyService();
     }
 
     protected void onStart() {
@@ -1898,6 +1900,7 @@ public class MiniActivity extends AppCompatActivity implements OnMapReadyCallbac
                     view.getContext().startActivity(intent);
                 }
             });
+
             Button share = (Button) findViewById(R.id.poi_share);
             share.setOnClickListener(new Button.OnClickListener() {
                 @Override
@@ -1913,29 +1916,22 @@ public class MiniActivity extends AppCompatActivity implements OnMapReadyCallbac
             });
             Button guide = (Button) findViewById(R.id.poi_guide);
 
-            if(lng.equals("English")) {
-                inform.setTextSize(8);
-                guide.setTextSize(9);
-            }
             guide.setOnClickListener(new Button.OnClickListener() {
                 @Override
-                public void onClick(View v) {
-                    String from = "saddr=" + curlocation.getLatitude() + "," + curlocation.getLongitude();
-                    String to = "daddr=" + mServer.getPOImodel().getPOILat() + "," + mServer.getPOImodel().getPOILong();
-                    Log.d("To:", to);
-                    String uri = "https://maps.google.com/maps?f=d&" + from + "&" + to + "&hl=tw";
-                    Log.d("Uri", uri);
-                    Uri i = Uri.parse(uri);
-                    Intent intent = new Intent(android.content.Intent.ACTION_VIEW, i);
+                public void onClick(View view) {
+
+                    String uri = "http://maps.google.com/maps?daddr=" + mServer.getPOImodel().getPOILat() + "," + mServer.getPOImodel().getPOILong() ;
+                    Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(uri));
+                    intent.setPackage("com.google.android.apps.maps");
                     startActivity(intent);
                 }
             });
-
             CameraPosition camerPosition = new CameraPosition.Builder()
                     .target(new LatLng(mServer.getPOImodel().getPOILat(), mServer.getPOImodel().getPOILong()))
                     .zoom(14)
                     .build();
             mMap.animateCamera(CameraUpdateFactory.newCameraPosition(camerPosition));
+
 
         }
         else if(x>=2){
@@ -2519,4 +2515,3 @@ public class MiniActivity extends AppCompatActivity implements OnMapReadyCallbac
     }
 
 }
-

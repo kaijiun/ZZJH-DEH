@@ -1,8 +1,6 @@
 package com.mmlab.zzjh_deh.adapter;
 
 import android.content.Context;
-import android.content.Intent;
-import android.os.Bundle;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -14,13 +12,9 @@ import android.widget.TextView;
 
 import com.amulyakhare.textdrawable.TextDrawable;
 import com.amulyakhare.textdrawable.util.ColorGenerator;
-import com.mikepenz.fontawesome_typeface_library.FontAwesome;
-import com.mikepenz.iconics.IconicsDrawable;
-import com.mmlab.zzjh_deh.LOIActivity;
 import com.mmlab.zzjh_deh.R;
 import com.mmlab.zzjh_deh.model.LOIModel;
 import com.mmlab.zzjh_deh.network.ProxyService;
-import com.mmlab.zzjh_deh.service.HttpAsyncTask;
 
 import java.util.ArrayList;
 

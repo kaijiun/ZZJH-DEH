@@ -1,20 +1,14 @@
 package com.mmlab.zzjh_deh;
 
-import android.content.BroadcastReceiver;
-import android.content.Context;
-import android.content.Intent;
-import android.content.IntentFilter;
 import android.os.Bundle;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.TextView;
 
 import com.liuguangqiang.progressbar.CircleProgressBar;
 import com.mmlab.zzjh_deh.adapter.ImageAdapter;
-import com.mmlab.zzjh_deh.constant.PLAYBACK;
 
 import java.util.ArrayList;
 

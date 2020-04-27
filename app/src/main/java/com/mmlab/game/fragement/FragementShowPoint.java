@@ -12,7 +12,6 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 
-import com.mmlab.zzjh_deh.MiniActivity;
 import com.mmlab.zzjh_deh.R;
 import com.mmlab.game.GameActivity;
 import com.mmlab.game.module.Id;

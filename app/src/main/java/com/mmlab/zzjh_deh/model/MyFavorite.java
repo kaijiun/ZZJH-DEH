@@ -3,7 +3,6 @@ package com.mmlab.zzjh_deh.model;
 
 
 import io.realm.RealmObject;
-import io.realm.annotations.Ignore;
 
 /**
  * Created by waynewei on 2015/10/25.

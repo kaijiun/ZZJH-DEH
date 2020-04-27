@@ -1,7 +1,5 @@
 package com.mmlab.zzjh_deh.save_data;
 
-import android.util.Log;
-
 
 import com.mmlab.zzjh_deh.model.LOISequenceModel;
 

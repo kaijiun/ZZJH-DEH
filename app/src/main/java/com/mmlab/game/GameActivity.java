@@ -2,28 +2,22 @@ package com.mmlab.game;
 
 import android.content.Context;
 import android.content.Intent;
-import android.media.AudioManager;
-import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
-import android.view.View;
 import android.widget.Button;
 import android.widget.MediaController;
 import android.widget.Toast;
 import android.widget.VideoView;
 
-import com.mmlab.zzjh_deh.MyApplication;
 import com.mmlab.zzjh_deh.model.DEHUser;
 import com.mmlab.game.callback.GroupFragmentCallback;
 import com.mmlab.game.callback.OnRoomGameStatusText;
 import com.mmlab.game.callback.RoomAdapterCallback;
 import com.mmlab.game.callback.RoomFragmentCallback;
-import com.mmlab.game.fragement.FragementShowPoint;
-import com.mmlab.game.fragement.RoomChoiceFragement;
 import com.mmlab.game.module.GameData;
 import com.mmlab.game.module.GameId;
 import com.mmlab.game.module.Group;
@@ -38,7 +32,6 @@ import com.mmlab.useless.LoginFragemet;
 import com.mmlab.zzjh_deh.R;
 import com.mmlab.game.fragement.GroupChoiceFragement;
 
-import java.io.IOException;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.util.ArrayList;

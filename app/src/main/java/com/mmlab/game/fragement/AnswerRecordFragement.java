@@ -1,6 +1,5 @@
 package com.mmlab.game.fragement;
 
-import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -15,20 +14,15 @@ import android.view.ViewGroup;
 
 
 import com.getbase.floatingactionbutton.FloatingActionButton;
-import com.google.android.gms.maps.CameraUpdateFactory;
 import com.mmlab.zzjh_deh.R;
 import com.mmlab.game.ApiService;
 import com.mmlab.game.GameActivity;
 import com.mmlab.game.db.DbHandler;
 import com.mmlab.game.module.AnswerRecordShowing;
 import com.mmlab.game.module.Id;
-import com.mmlab.game.module.POI;
-import com.mmlab.game.module.chestMedia;
 
-import java.util.ArrayList;
 import java.util.List;
 
-import okhttp3.ResponseBody;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;

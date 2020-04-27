@@ -2,7 +2,6 @@ package com.mmlab.zzjh_deh.save_data;
 
 import android.util.Log;
 
-import com.mmlab.zzjh_deh.MyApplication;
 import com.mmlab.zzjh_deh.model.POIModel;
 
 import org.json.JSONArray;

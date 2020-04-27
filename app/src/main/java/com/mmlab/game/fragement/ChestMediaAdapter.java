@@ -2,7 +2,6 @@ package com.mmlab.game.fragement;
 
 
 import android.app.Activity;
-import android.app.Dialog;
 import android.content.Intent;
 import android.media.AudioManager;
 import android.net.Uri;
@@ -11,13 +10,11 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.Window;
 import android.widget.ImageView;
 import android.widget.MediaController;
 import android.widget.Toast;
 import android.widget.VideoView;
 
-import com.mmlab.zzjh_deh.MyApplication;
 import com.mmlab.zzjh_deh.R;
 import com.mmlab.game.module.UrlMediaPlayer;
 import com.mmlab.game.module.chestMedia;
